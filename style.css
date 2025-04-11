@@ -1,0 +1,198 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #503238, #50192a), url('assets/images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#50192a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180vh;
+}
+
+/* Player Container */
+.player-container {
+  position: relative; /* Required for emoji positioning */
+  background-color: #ca768c;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Floating Emojis */
+.floating-emojis {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-emojis .emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: float 5s infinite ease-in-out;
+  transition: transform 3s ease, opacity 3s ease;
+}
+
+/* Position emojis */
+.floating-emojis .emoji:nth-child(1) { top: 0; left: 10%; }
+.floating-emojis .emoji:nth-child(2) { top: 0; right: 10%; }
+.floating-emojis .emoji:nth-child(3) { bottom: 0; left: 15%; }
+.floating-emojis .emoji:nth-child(4) { bottom: 0; right: 15%; }
+
+/* Float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Float away on hover */
+.player-container:hover .floating-emojis .emoji {
+  transform: translateY(-100px) scale(1.2);
+  opacity: 0;
+}
+
+/* Cover Image */
+.cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+/* Song Info */
+.song-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.song-info h3 {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 1.2rem 0;
+}
+
+.action-btn {
+  background-color: #3e4a5b;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #596d88;
+}
+
+/* Volume Control */
+.volume-control {
+  margin-top: 1rem;
+}
+
+.volume-control input[type="range"] {
+  width: 100%;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #d65773;
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  cursor: pointer;
+  margin: 1rem 0 0.3rem;
+  position: relative;
+}
+
+.progress {
+  background: #e489bb;
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Playlist */
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.playlist li {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid #d86e92;
+  transition: background-color 0.2s;
+}
+
+.playlist li:hover {
+  background-color: #5c2432;
+}
+
+.playlist li.active {
+  background-color: #d35877;
+  color: white;
+}
+
+/* Recap Button */
+#recap {
+  background-color: #cc7391;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+#recap:hover {
+  background-color: #e9b5cf;
+}
+
+/* Recap Container */
+#recap-container {
+  background-color: #ac4463;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 0.9rem;
+  display: none;
+}

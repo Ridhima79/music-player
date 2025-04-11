@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="player-container">
+    <div class="cover">
+      <img id="cover" src="assets/images/cover1.jpg" alt="Song Cover" />
+    </div>
+    <div class="song-info">
+      <h2 id="title">cry for me</h2>
+      <h3 id="artist">the weekend</h3>
+    </div>
+    <div class="floating-emojis">
+      <span class="emoji">🍒</span>
+      <span class="emoji">🎀</span>
+      <span class="emoji">🍒</span>
+      <span class="emoji">🎀</span>
+    </div>
+    
+    
+    <audio id="audio" src="assets/music/song1.mp3"></audio>
+
+    <div class="progress-container" id="progress-container">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="time">
+      <span id="current-time">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button id="prev" class="action-btn">⏮️</button>
+      <button id="play" class="action-btn">💗</button>
+      <button id="next" class="action-btn">⏭️</button>
+      <button id="shuffle" class="action-btn">🔀</button>
+    </div>
+
+    <div class="volume-control">
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+
+    <ul class="playlist" id="playlist">
+      <li data-index="0">cry for me - the weekend</li>
+      <li data-index="1">open hearts - the weekend</li>
+      <li data-index="2">like jennie - jennie</li>
+      <li data-index="3">mantra - jennie</li>
+      <li data-index="4">ME! - Taylor Swift</li>
+      <li data-index="5">Bejeweled - Taylor Swift</li>
+    </ul>
+
+    <!-- Recap button -->
+    <button id="recap">🎵 Recap</button>
+
+    <!-- Recap container to display stats -->
+    <div id="recap-container"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
