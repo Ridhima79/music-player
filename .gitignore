@@ -1,0 +1,23 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore node_modules (in case you use npm)
+node_modules/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore compiled files
+*.class
+*.pyc
+
+# Optional: ignore music files (if you want to keep them local only)
+# assets/music/
+
+# Optional: ignore image assets (if not needed on GitHub)
+# assets/images/
