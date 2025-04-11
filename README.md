@@ -35,4 +35,18 @@ Welcome to **CherryTune**, a beautiful, lightweight music player built with **HT
 ---
 
 ## 📂 Project Structure
+MUSIC-PLAYER/
+│
+├── assets/
+│   ├── images/                # Album covers, background images, etc.
+│   └── music/                 # Audio files (MP3, WAV, etc.)
+│
+├── css/
+│   └── style.css              # All styles including layout, animations, floating emojis
+│
+├── js/
+│   └── script.js              # Main functionality: play/pause, volume, playlist, recap logic
+│
+├── index.html                 # Main HTML file for the music player layout
+└── README.md                  # Project overview, setup instructions, and credits
 
