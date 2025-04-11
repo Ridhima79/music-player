@@ -1,4 +1,4 @@
-# 🎵 CherryTune - A Stylish Music Player App
+# 🎵  Music Player App
 
 Welcome to **CherryTune**, a beautiful, lightweight music player built with **HTML, CSS, and JavaScript**. It features elegant controls, a custom playlist system, a recap function that shows your most played tracks, and charming floating 🍒🎀 emojis to enhance the vibe.
 
@@ -34,7 +34,9 @@ Welcome to **CherryTune**, a beautiful, lightweight music player built with **HT
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
+
+```plaintext
 MUSIC-PLAYER/
 │
 ├── assets/
@@ -45,8 +47,7 @@ MUSIC-PLAYER/
 │   └── style.css              # All styles including layout, animations, floating emojis
 │
 ├── js/
-│   └── script.js              # Main functionality: play/pause, volume, playlist, recap logic
+│   └── script.js              # JavaScript for playback, playlist, and recap features
 │
-├── index.html                 # Main HTML file for the music player layout
-└── README.md                  # Project overview, setup instructions, and credits
-
+├── index.html                 # Main HTML file for UI structure
+└── README.md                  # Project description and setup instructions
